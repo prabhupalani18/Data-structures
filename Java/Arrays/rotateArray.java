@@ -29,6 +29,7 @@ public class rotateArray {
         int[] arr = {9,7,3,6,7,2,8,-4,-1,5};
         int k = 4;
         int n = arr.length;
+        k = k%n; // If K is greater than N, it will bring down within the limit
         revIndexArray(arr, 0, n-1);
         revIndexArray(arr, 0, k-1);
         revIndexArray(arr, k, n-1);
