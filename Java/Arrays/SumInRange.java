@@ -1,6 +1,5 @@
 package Arrays;
 
-import java.util.Arrays;
 import java.util.Scanner;
 //Given N array elements and Q queries, For each query, calculate sum of all elements in range [L,R]: (1<=N,Q<=10^5)
 //Time complexity for calculateSum1 - O(n*q), Space complexity - O(1)
