@@ -38,15 +38,10 @@ public class SumInRange {
         System.out.println("Enter size of queries");
         int q = sc.nextInt();
         int n = arr.length;
-        int[] pSum = new int[n];
-        int sum=0;
-        for(int i=0;i<n;i++)
-        {
-            sum = sum+arr[i];
-            pSum[i] = sum;
-        }
+        int[] pSum = prefixSum(arr);
         for(int i=0;i<q;i++)
         {
+            int sum=0;
             System.out.println("Enter left range of "+(i+1)+" query:");
             int l = sc.nextInt();
             System.out.println("Enter right range of "+(i+1)+" query:");
@@ -65,8 +60,19 @@ public class SumInRange {
                 sum = pSum[r];
             }
             System.out.println("Sum: "+sum);
-            sum=0;
         }
+    }
+
+    public static int[] prefixSum(int[] arr)
+    {
+        int n = arr.length;
+        int[] pSum = new int[n];
+        pSum[0] = arr[0];
+        for(int i=1;i<n;i++)
+        {
+            pSum[i] = pSum[i-1] + arr[i];
+        }
+        return pSum;
     }
     public static void main(String[] args) {
         int[] arr = {6,7,2,-1,8,3,-5,10};
