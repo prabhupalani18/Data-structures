@@ -1,7 +1,7 @@
 package Arrays;
 
 //Given N array elements, Count the no. of equilibrium index. i.e: sum of all elements on left of ith index == sum of all elements on right of ith index
-//Time complexity - O(n), Space complexity - O(1)
+//Time complexity - O(n), Space complexity - O(n)
 
 public class EquilibriumIndex {
     public static int[] prefixSum(int[] arr)
