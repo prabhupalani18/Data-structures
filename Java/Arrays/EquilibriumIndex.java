@@ -21,7 +21,7 @@ public class EquilibriumIndex {
         int[] pSum = prefixSum(arr);
         int count = 0;
         int n = arr.length;
-        if(pSum[n-1]-pSum[0] == 0)
+        if(pSum[n-1]-pSum[0] == 0) // Checking for 0th index as left sum of 0th index in zero
         {
             count++;
         }
