@@ -21,9 +21,13 @@ public class EquilibriumIndex {
         int[] pSum = prefixSum(arr);
         int count = 0;
         int n = arr.length;
-        for(int i=0;i<n;i++)
+        if(pSum[n-1]-pSum[0] == 0)
         {
-            if(pSum[i] == pSum[n-1]-pSum[i])
+            count++;
+        }
+        for(int i=1;i<n;i++)
+        {
+            if(pSum[i-1] == pSum[n-1]-pSum[i])
             {
                 count++;
             }
