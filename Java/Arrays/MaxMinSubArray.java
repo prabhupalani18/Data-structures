@@ -30,6 +30,11 @@ public class MaxMinSubArray {
         int[] ans = findMinAndMax(arr);
         int min = ans[0];
         int max = ans[1];
+        if(min == max) // if all the values are same
+        {
+            System.out.println("1");
+            return;
+        }
         int n = arr.length;
         int minIndex=-1;
         int maxIndex=-1;
@@ -56,5 +61,7 @@ public class MaxMinSubArray {
     public static void main(String[] args) {
         int[] arr = {2,8,-4,9,-1,-5,6,-12};
         smallestMaxMinSubArray(arr);
+        int[] arr2 = {2,2,2,2,2,2,2,2,2,2};
+        smallestMaxMinSubArray(arr2);
     }
 }
