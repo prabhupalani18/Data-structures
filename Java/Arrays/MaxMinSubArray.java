@@ -1,7 +1,8 @@
 package Arrays;
 
 //Given an array, return the length of smallest sub array which contains both 'MAX' and 'MIN' of array subarray:
-//Time complexity - O(n), Space complexity - O(1)
+//Time complexity for findMinAndMax - O(n), Space complexity - O(1)
+//Time complexity for smallestMaxMinSubArray - O(n), Space complexity - O(1)
 
 public class MaxMinSubArray {
 
