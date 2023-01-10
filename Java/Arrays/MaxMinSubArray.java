@@ -22,8 +22,7 @@ public class MaxMinSubArray {
                 min=arr[i];
             }
         }
-        int[] ans = {min,max};
-        return ans;
+        return new int[]{min,max};
     }
 
     public static void smallestMaxMinSubArray(int[] arr)
