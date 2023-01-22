@@ -1,7 +1,7 @@
 package Arrays;
 
 //Given an 2 array of N*M elements, find sum of each row.
-//Time complexity - O(n^2), Space complexity - O(1)
+//Time complexity - O(n*m), Space complexity - O(1)
 
 public class RowWiseSum {
 
