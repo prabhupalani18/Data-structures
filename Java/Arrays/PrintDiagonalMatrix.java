@@ -1,7 +1,7 @@
 package Arrays;
 
 //Given an 2 array of N*N square matrix, print leading and trailing diagonal matrix.
-//Time complexity - O(n*n), Space complexity - O(1)
+//Time complexity - O(n), Space complexity - O(1)
 
 public class PrintDiagonalMatrix {
 
