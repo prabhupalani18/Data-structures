@@ -1,7 +1,7 @@
 package Arrays;
 
 //Given an 2 array of square matrix, calculate transpose of the array with space complexity O(1) (i.e: transpose array in place and print).
-//Time complexity for transposeMatrix1 - O(N*M), Space complexity - O(1)
+//Time complexity for transposeMatrix1 - O(N^2), Space complexity - O(1)
 
 public abstract class TransposeMatrix {
 
