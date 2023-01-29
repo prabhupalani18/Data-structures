@@ -55,7 +55,7 @@ public class MaxSubArraySum {
     {
         int n = arr.length;
         int sum=0;
-        for(int i=0;i<k-1;i++)
+        for(int i=0;i<k;i++)
         {
             sum+=arr[i];
         }
@@ -69,8 +69,6 @@ public class MaxSubArraySum {
             s++;
             e++;
         }
-        sum=sum-arr[s-2]+arr[n-1];
-        max = Math.max(max, sum);
         System.out.println(max);
     }
 
