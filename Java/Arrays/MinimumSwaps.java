@@ -23,7 +23,7 @@ public class MinimumSwaps {
         else
         {
             int bad=0;
-            for(int i=0;i<k;i++)
+            for(int i=0;i<k;i++) // Count of bad in first subarray
             {
                 if(arr[i]>B)
                 {
