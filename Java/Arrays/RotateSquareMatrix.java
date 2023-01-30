@@ -1,6 +1,6 @@
 package Arrays;
 
-// *Given an 2 array of square matrix, Rotate the array 90 degree with space complexity O(1).
+// *Given an 2D array of square matrix, Rotate the array 90 degree with space complexity O(1).
 //*Time complexity - O(N^2), Space complexity - O(1)
 
 public class RotateSquareMatrix {
