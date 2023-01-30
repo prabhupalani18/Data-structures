@@ -1,7 +1,7 @@
 package Arrays;
 
 // *Given an array of N elements and a number B, find minimum number of swaps to bring all numbers <=B together.
-//*Time complexity - O(), Space complexity - O()
+//*Time complexity - O(n), Space complexity - O(1)
 
 public class MinimumSwaps {
 
