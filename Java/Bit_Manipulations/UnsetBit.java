@@ -1,7 +1,7 @@
 package Bit_Manipulations;
 
 // *Unset ith bit of a number if it is set, otherwise don't change.
-// *Time complexity - O(n), Space complexity - O(1)
+// *Time complexity - O(1), Space complexity - O(1)
 
 public class UnsetBit {
 
