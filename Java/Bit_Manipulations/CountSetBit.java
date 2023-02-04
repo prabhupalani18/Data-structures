@@ -16,7 +16,7 @@ public class CountSetBit {
         return false;
     }
 
-    public static int countSetBit1(int n)
+    public static int countSetBit1(int n) // * for known number of 32 bits
     {
         int ans = 0;
         for(int i=0;i<32;i++)
@@ -29,7 +29,7 @@ public class CountSetBit {
         return ans;
     }
 
-    public static int countSetBit2(int n)
+    public static int countSetBit2(int n) // * for known number of bits
     {
         int ans = 0;
         while(n>0)
