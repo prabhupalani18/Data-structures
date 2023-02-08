@@ -3,6 +3,7 @@ package Modular;
 // *Given a, n, p, calculate (a^n)%p without using built-in functions.
 // * Constraints - 1<=a<=10^9, 2<=p<=10^9, 1<=n<=10^9
 // *Time complexity for findPowerMod1 - O(n), Space complexity - O(1)
+// *Time complexity for findPowerMod2 - O(n), Space complexity - O(1)
 
 public class PowerFunction {
 
