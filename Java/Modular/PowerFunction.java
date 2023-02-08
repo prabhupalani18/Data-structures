@@ -12,14 +12,27 @@ public class PowerFunction {
         {
             ans=ans*a;
         }
-        return a%p;
+        ans=ans%p;
+        return ans;
+    }
+
+    public static long findPowerMod2(int a, int n, int p){
+        long ans=1;
+        for(int i=1;i<=n;i++)
+        {
+            ans=(ans*a)%p;
+        }
+        ans=ans%p;
+        return ans;
     }
 
     public static void main(String[] args) {
-        int a = 2;
-        int n = 6;
-        int p = 3;
-        int res1 = findPowerMod1(a, n, p); 
+        int a = 9;
+        int n = 7;
+        int p = 11;
+        int res1 = findPowerMod1(a, n, p);
+        long res2 = findPowerMod2(a, n, p);
         System.out.println(res1);
+        System.out.println(res2);
     }
 }
