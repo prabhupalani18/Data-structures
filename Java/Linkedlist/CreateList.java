@@ -38,6 +38,20 @@ public class CreateList {
         }
     }
 
+    public static Node insertFirst(int n, Node head)
+    {
+        Node nd = new Node(n);
+        if(head==null)
+        {
+            head=nd;
+        }
+        else{
+            nd.next=head;
+            head=nd;
+        }
+        return head;
+    }
+
     public static void main(String[] args) {
         CreateList list = new CreateList();
         list.head = new Node(1);
@@ -46,6 +60,9 @@ public class CreateList {
         list.head.next = second;
         second.next = third;
 
+        printList(list.head);
+
+        list.head = insertFirst(6, list.head);
         printList(list.head);
     }
     
