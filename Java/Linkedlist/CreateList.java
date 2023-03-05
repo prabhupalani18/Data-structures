@@ -1,5 +1,7 @@
 package Linkedlist;
 
+import java.util.HexFormat;
+
 //* Implement singly linkedlist using Node class
 //* Time complexity - O(n), Space complexity - O(1)
 
@@ -52,6 +54,26 @@ public class CreateList {
         return head;
     }
 
+    public static Node insertLast(int n, Node head)
+    {
+        Node nd = new Node(n);
+        if(head==null)
+        {
+            head=nd;
+            return head;
+        }
+        else{
+            Node current=head;
+            while(current.next!=null)
+            {
+                current=current.next;
+            }
+            current.next=nd;
+            return head;
+        }
+    }
+
+
     public static void main(String[] args) {
         CreateList list = new CreateList();
         list.head = new Node(1);
@@ -63,6 +85,9 @@ public class CreateList {
         printList(list.head);
 
         list.head = insertFirst(6, list.head);
+        printList(list.head);
+
+        list.head = insertLast(4, list.head);
         printList(list.head);
     }
     
