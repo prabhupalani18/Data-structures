@@ -73,6 +73,26 @@ public class CreateList {
         }
     }
 
+    public static Node insertAtPosition(int n,int pos,Node head)
+    {
+        Node nd = new Node(n);
+        if(head==null)
+        {
+            head=nd;
+            return head;
+        }
+        else{
+            Node temp=head;
+            while(pos>1)
+            {
+                temp=temp.next;
+            }
+            nd.next=temp.next;
+            temp.next=nd;
+            return head;
+        }
+    }
+
 
     public static void main(String[] args) {
         CreateList list = new CreateList();
@@ -88,6 +108,9 @@ public class CreateList {
         printList(list.head);
 
         list.head = insertLast(4, list.head);
+        printList(list.head);
+
+        list.head = insertAtPosition(8, 1, list.head);
         printList(list.head);
     }
     
