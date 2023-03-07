@@ -93,6 +93,24 @@ public class CreateList {
         }
     }
 
+    public static int getSize(Node head)
+    {
+        if(head==null)
+        {
+            return 0;
+        }
+        else{
+            int size=1;
+            Node current=head;
+            while(current.next!=null)
+            {
+                size++;
+                current=current.next;
+            }
+            return size;
+        }
+    }
+
 
     public static void main(String[] args) {
         CreateList list = new CreateList();
@@ -112,6 +130,9 @@ public class CreateList {
 
         list.head = insertAtPosition(8, 1, list.head);
         printList(list.head);
+
+        int size = getSize(list.head);
+        System.out.println(size);
     }
     
 }
