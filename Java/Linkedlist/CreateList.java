@@ -23,6 +23,7 @@ public class CreateList {
 
     public static void printList(Node head)
     {
+        System.out.println("Printing list");
         Node current = head;
         if(current==null)
         {
@@ -42,6 +43,7 @@ public class CreateList {
 
     public static Node insertFirst(int n, Node head)
     {
+        System.out.println("Inserting at first");
         Node nd = new Node(n);
         if(head==null)
         {
@@ -56,6 +58,7 @@ public class CreateList {
 
     public static Node insertLast(int n, Node head)
     {
+        System.out.println("Inserting at last");
         Node nd = new Node(n);
         if(head==null)
         {
@@ -75,6 +78,7 @@ public class CreateList {
 
     public static Node insertAtPosition(int n,int pos,Node head)
     {
+        System.out.println("Inserting at given position");
         Node nd = new Node(n);
         if(head==null)
         {
@@ -95,6 +99,7 @@ public class CreateList {
 
     public static int getSize(Node head)
     {
+        System.out.println("Returning list size");
         if(head==null)
         {
             return 0;
@@ -108,6 +113,29 @@ public class CreateList {
                 current=current.next;
             }
             return size;
+        }
+    }
+
+    public static Node insertMiddle(Node head,int val)
+    {
+        System.out.println("Inserting at middle");
+        Node nd = new Node(val);
+        if(head==null)
+        {
+            head=nd;
+            return head;
+        }
+        else{
+            Node slow=head;
+            Node fast=head.next;
+            while(fast!=null && fast.next!=null)
+            {
+                slow=slow.next;
+                fast=fast.next.next;
+            }
+            nd.next=slow.next;
+            slow.next=nd;
+            return head;
         }
     }
 
@@ -133,6 +161,12 @@ public class CreateList {
 
         int size = getSize(list.head);
         System.out.println(size);
+
+        list.head = insertMiddle(list.head, 9);
+        printList(list.head);
+
+        list.head = insertMiddle(list.head, 7);
+        printList(list.head);
     }
     
 }
