@@ -139,6 +139,20 @@ public class CreateList {
         }
     }
 
+    public static Node deleteFirst(Node head)
+    {
+        if(head==null)
+        {
+            System.out.println("List is empty");
+            return null;
+        }
+        else
+        {
+            System.out.println("Deleting at first");
+            head=head.next;
+            return head;
+        }
+    }
 
     public static void main(String[] args) {
         CreateList list = new CreateList();
@@ -166,6 +180,9 @@ public class CreateList {
         printList(list.head);
 
         list.head = insertMiddle(list.head, 7);
+        printList(list.head);
+
+        list.head = deleteFirst(list.head);
         printList(list.head);
     }
     
