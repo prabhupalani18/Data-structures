@@ -154,6 +154,25 @@ public class CreateList {
         }
     }
 
+    public static Node deleteLast(Node head) {
+        if(head==null)
+        {
+            System.out.println("Linked list is empty");
+            return null;
+        }
+        else
+        {
+            System.out.println("Deleting at last");
+            Node current=head;
+            while(current.next.next!=null)
+            {
+                current=current.next;
+            }
+            current.next=null;
+            return head;
+        }
+    }
+
     public static void main(String[] args) {
         CreateList list = new CreateList();
         list.head = new Node(1);
@@ -183,6 +202,9 @@ public class CreateList {
         printList(list.head);
 
         list.head = deleteFirst(list.head);
+        printList(list.head);
+
+        list.head = deleteLast(list.head);
         printList(list.head);
     }
     
