@@ -85,11 +85,18 @@ public class CreateList {
             head=nd;
             return head;
         }
+        else if(pos==1)
+        {
+            nd.next=head;
+            head=nd;
+            return head;
+        }
         else{
             Node temp=head;
             while(pos>1)
             {
                 temp=temp.next;
+                pos--;
             }
             nd.next=temp.next;
             temp.next=nd;
@@ -173,6 +180,33 @@ public class CreateList {
         }
     }
 
+    public static Node deleteAtPostion(Node head,int pos)
+    {
+        if(head==null)
+        {
+            System.out.println("Linked list is empty");
+            return null;
+        }
+        else if(pos==1)
+        {
+            System.out.println("Deleting at given position");
+            head=head.next;
+            return head;
+        }
+        else
+        {
+            System.out.println("Deleting at given position");
+            Node current=head;
+            while(pos>2)
+            {
+                current=current.next;
+                pos--;
+            }
+            current.next=current.next.next;
+            return head;
+        }
+    }
+
     public static void main(String[] args) {
         CreateList list = new CreateList();
         list.head = new Node(1);
@@ -205,6 +239,9 @@ public class CreateList {
         printList(list.head);
 
         list.head = deleteLast(list.head);
+        printList(list.head);
+
+        list.head = deleteAtPostion(list.head,2);
         printList(list.head);
     }
     
