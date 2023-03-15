@@ -1,7 +1,4 @@
 package Linkedlist;
-
-import java.util.HexFormat;
-
 //* Implement singly linkedlist using Node class
 //* Time complexity - O(n), Space complexity - O(1)
 
